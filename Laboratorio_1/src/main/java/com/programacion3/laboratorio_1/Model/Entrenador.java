@@ -11,8 +11,8 @@ public class Entrenador extends Persona implements Serializable {
     private ArrayList<SesionEntrenamiento> listaSesiones;
 
 
-    public Entrenador(String nombre, String cedula, Deporte deporte, ArrayList<SesionEntrenamiento> listaSesiones) {
-        super(nombre, cedula);
+    public Entrenador(String nombre, String cedula, UserName userName, Deporte deporte, ArrayList<SesionEntrenamiento> listaSesiones) {
+        super(nombre, cedula, userName);
         this.deporte = deporte;
         this.listaSesiones = listaSesiones;
     }

@@ -6,8 +6,8 @@ public class Administrador extends Persona implements Serializable {
 
     private static final long serialVersionUID= 1L;
 
-    public Administrador(String nombre, String cedula) {
-        super(nombre, cedula);
+    public Administrador(String nombre, String cedula, UserName userName) {
+        super(nombre, cedula, userName);
     }
 
     public Administrador() {

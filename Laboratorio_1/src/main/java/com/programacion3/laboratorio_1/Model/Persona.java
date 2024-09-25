@@ -8,11 +8,13 @@ public abstract class Persona implements Serializable {
 
     private String nombre;
     private String cedula;
+    private UserName userName;
 
 
-    public Persona(String nombre, String cedula) {
+    public Persona(String nombre, String cedula, UserName userName) {
         this.nombre = nombre;
         this.cedula = cedula;
+        this.userName = userName;
     }
 
     public Persona(){
@@ -34,5 +36,13 @@ public abstract class Persona implements Serializable {
 
     public void setCedula(String cedula) {
         this.cedula = cedula;
+    }
+
+    public UserName getUserName() {
+        return userName;
+    }
+
+    public void setUserName(UserName userName) {
+        this.userName = userName;
     }
 }
