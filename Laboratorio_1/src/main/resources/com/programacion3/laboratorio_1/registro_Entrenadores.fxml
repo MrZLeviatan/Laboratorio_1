@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.programacion3.laboratorio_1.View.RegistroEntrenadores">
+    <children>
+        <Label text="Registro de Entrenadores" layoutX="20.0" layoutY="14.0" />
+
+        <Label text="Nombre:" layoutX="20.0" layoutY="50.0" />
+        <TextField fx:id="nombreField" layoutX="100.0" layoutY="50.0" />
+
+        <Label text="Cédula:" layoutX="20.0" layoutY="90.0" />
+        <TextField fx:id="cedulaField" layoutX="100.0" layoutY="90.0" />
+
+        <Label text="Username:" layoutX="20.0" layoutY="130.0" />
+        <TextField fx:id="usernameField" layoutX="100.0" layoutY="130.0" />
+
+        <Label text="Password:" layoutX="20.0" layoutY="170.0" />
+        <PasswordField fx:id="passwordField" layoutX="100.0" layoutY="170.0" />
+
+        <Label text="Deporte:" layoutX="20.0" layoutY="210.0" />
+        <ComboBox fx:id="deporteComboBox" layoutX="100.0" layoutY="210.0" />
+
+        <Button text="Registrar" layoutX="20.0" layoutY="250.0" onAction="#registrarEntrenador"/>
+        <Button text="Actualizar" layoutX="100.0" layoutY="250.0" onAction="#actualizarEntrenador"/>
+        <Button text="Eliminar" layoutX="200.0" layoutY="250.0" onAction="#eliminarEntrenador"/>
+
+        <TableView fx:id="tablaEntrenadores" layoutX="20.0" layoutY="300.0" prefWidth="400.0" prefHeight="200.0">
+            <columns>
+                <TableColumn text="Nombre" fx:id="colNombre" />
+                <TableColumn text="Cédula" fx:id="colCedula" />
+                <TableColumn text="Username" fx:id="colUsername" />
+                <TableColumn text="Deporte" fx:id="colDeporte" />
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>
+

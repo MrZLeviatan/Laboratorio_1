@@ -329,13 +329,13 @@ public class ClubXd implements Serializable {
         Miembros miembros = hallarMiembro(id);
         Deporte deporte = hallarDeporte(nombre);
 
-        if (miembros.getTipoMiembro().equals(TipoMiembro.JUVENIL)){
+        if (miembros.getTipoMiembro().equals(TipoMiembro.Juvenil)){
             if (!deporte.getTipoDificultad().equals(TipoDificultad.ALTO)){
                 miembros.getListaDeportes().add(deporte);
             }else{
                 throw new MiembroException("Error agregad deporte");
             }
-        }else if (miembros.getTipoMiembro().equals(TipoMiembro.ADULTOS)){
+        }else if (miembros.getTipoMiembro().equals(TipoMiembro.Adulto)){
             miembros.getListaDeportes().add(deporte);
         }
     }

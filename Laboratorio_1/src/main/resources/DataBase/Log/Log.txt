@@ -1,0 +1,28 @@
+sep 25, 2024 11:31:43 P.M. com.programacion3.laboratorio_1.Utils.ArchivoUtil guardarRegistroLog
+INFO: La Aplicacion Se Inicio / Inicio De Sesion  / 2024-09-25-11-31
+sep 25, 2024 11:32:10 P.M. com.programacion3.laboratorio_1.Utils.ArchivoUtil guardarRegistroLog
+INFO:  Registro de Publicador / Se agrega el Miembro ID  444 / 2024-09-25-11-32
+sep 25, 2024 11:32:29 P.M. com.programacion3.laboratorio_1.Utils.ArchivoUtil guardarRegistroLog
+SEVERE:  Ingreso Plataforma / Ingreso el Miembro / 2024-09-25-11-32
+sep 25, 2024 11:37:52 P.M. com.programacion3.laboratorio_1.Utils.ArchivoUtil guardarRegistroLog
+INFO: La Aplicacion Se Inicio / Inicio De Sesion  / 2024-09-25-11-37
+sep 25, 2024 11:40:25 P.M. com.programacion3.laboratorio_1.Utils.ArchivoUtil guardarRegistroLog
+INFO: La Aplicacion Se Inicio / Inicio De Sesion  / 2024-09-25-11-40
+sep 25, 2024 11:41:50 P.M. com.programacion3.laboratorio_1.Utils.ArchivoUtil guardarRegistroLog
+INFO: La Aplicacion Se Inicio / Inicio De Sesion  / 2024-09-25-11-41
+sep 25, 2024 11:42:07 P.M. com.programacion3.laboratorio_1.Utils.ArchivoUtil guardarRegistroLog
+INFO: La Aplicacion Se Inicio / Inicio De Sesion  / 2024-09-25-11-42
+sep 25, 2024 11:43:39 P.M. com.programacion3.laboratorio_1.Utils.ArchivoUtil guardarRegistroLog
+INFO: La Aplicacion Se Inicio / Inicio De Sesion  / 2024-09-25-11-43
+sep 25, 2024 11:47:12 P.M. com.programacion3.laboratorio_1.Utils.ArchivoUtil guardarRegistroLog
+INFO: La Aplicacion Se Inicio / Inicio De Sesion  / 2024-09-25-11-47
+sep 25, 2024 11:48:55 P.M. com.programacion3.laboratorio_1.Utils.ArchivoUtil guardarRegistroLog
+INFO: La Aplicacion Se Inicio / Inicio De Sesion  / 2024-09-25-11-48
+sep 25, 2024 11:51:35 P.M. com.programacion3.laboratorio_1.Utils.ArchivoUtil guardarRegistroLog
+INFO: La Aplicacion Se Inicio / Inicio De Sesion  / 2024-09-25-11-51
+sep 25, 2024 11:54:29 P.M. com.programacion3.laboratorio_1.Utils.ArchivoUtil guardarRegistroLog
+INFO: La Aplicacion Se Inicio / Inicio De Sesion  / 2024-09-25-11-54
+sep 25, 2024 11:55:21 P.M. com.programacion3.laboratorio_1.Utils.ArchivoUtil guardarRegistroLog
+INFO:  Registro de Publicador / Se agrega el Miembro ID  1111 / 2024-09-25-11-55
+sep 25, 2024 11:55:46 P.M. com.programacion3.laboratorio_1.Utils.ArchivoUtil guardarRegistroLog
+SEVERE:  Ingreso Plataforma / Ingreso el Miembro / 2024-09-25-11-55

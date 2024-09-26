@@ -5,6 +5,8 @@ import com.programacion3.laboratorio_1.Exceptions.PersonaException;
 import com.programacion3.laboratorio_1.Exceptions.SesionesException;
 import com.programacion3.laboratorio_1.Model.*;
 import com.programacion3.laboratorio_1.Utils.Persistencia;
+
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class ModelFactory {
@@ -12,7 +14,7 @@ public class ModelFactory {
     ClubXd clubXd;
 
 
-    private static class SingletonHolder {
+    public static class SingletonHolder {
         private final static ModelFactory eINSTANCE;
 
         static {
@@ -30,13 +32,14 @@ public class ModelFactory {
 
     public ClubXd getCineXd() { return clubXd; }
 
-    public ModelFactory() {
+
+    private ModelFactory() {
 
         clubXd = new ClubXd();
 
         System.out.printf("YO TE INVOCO!! CLASE Singleton ");
 
-        cargarDatosArchivos();
+        cargarDatos();
 
         registraAccionesSistema("Inicio De Sesion ", 1, "La Aplicacion Se Inicio");
 
@@ -60,8 +63,8 @@ public class ModelFactory {
 
     public boolean deleteAdministrador(Administrador administrador) throws PersonaException {
         if (administrador.equals(null)){
-            throw new PersonaException("Persona nula");
             registraAccionesSistema("Error al eliminar Administrador",2,"Error de Eliminacion");
+            return false;
         }else{
             getCineXd().removerPersona(administrador);
             salvarDatos();
@@ -99,8 +102,8 @@ public class ModelFactory {
 
     public boolean deleteMiembro(Miembros miembros) throws PersonaException {
         if (miembros.equals(null)){
-            throw new PersonaException("Persona nula");
             registraAccionesSistema("Error al eliminar Miembror",2,"Error de Eliminacion");
+            return false;
         }else{
             getCineXd().removerPersona(miembros);
             salvarDatos();
@@ -138,8 +141,8 @@ public class ModelFactory {
 
     public boolean deleteEntrenador(Entrenador entrenador) throws PersonaException {
         if (entrenador.equals(null)){
-            throw new PersonaException("Persona nula");
             registraAccionesSistema("Error al eliminar Entrenador",2,"Error de Eliminacion");
+            return false;
         }else{
             getCineXd().removerPersona(entrenador);
             salvarDatos();
@@ -176,8 +179,8 @@ public class ModelFactory {
 
     public boolean deleteDeporte(Deporte deporte) throws DeportesException {
         if (deporte.equals(null)){
-            throw new DeportesException("Deporte nulo");
             registraAccionesSistema("Error al eliminar Deporte",2,"Error de Eliminacion");
+            return false;
         }else{
             getCineXd().removerDeporte(deporte);
             salvarDatos();
@@ -208,7 +211,7 @@ public class ModelFactory {
 
     public boolean deleteSesion(SesionEntrenamiento sesionEntrenamiento) throws SesionesException {
         getCineXd().removerSesion(sesionEntrenamiento);
-        salvatDatos();
+        salvarDatos();
         registraAccionesSistema("Eliminacin de Sesion de Entrenamiento ",
                 3,  "Eliminacion de Deporte");
         return true;
@@ -253,10 +256,46 @@ public class ModelFactory {
         }
     }
 
+    public Deporte hallarDeporte(String nombre){
+        return getCineXd().hallarDeporte(nombre);
+    }
+
 
     private void registraAccionesSistema(String mensaje, int nivel, String accion){
         Persistencia.guardaRegistroLog(mensaje,nivel,accion);
 
+    }
+
+
+    private void salvarDatos() {
+
+        try {
+
+            Persistencia.guardarAdmin(getCineXd().obtenerAdmins());
+            Persistencia.guardarEntrenador(getCineXd().obtenerEntrenadores());
+            Persistencia.guardarDeporte(getCineXd().getListaDeportes());
+            Persistencia.guardarMiembros(getCineXd().getListaMiembros());
+            Persistencia.guardarSesiones(getCineXd().getListaSesiones());
+            //   guardarResourseXML();
+            // guardarResourseBinario();
+
+
+        } catch (IOException e) {
+
+            throw new RuntimeException(e);
+
+        }
+    }
+
+
+    public void cargarDatos(){
+        try {
+
+            Persistencia.cargarDatosArchivos(getCineXd());
+
+        } catch (IOException e){
+            throw new RuntimeException("Error cargando los datos: " + e.getMessage(), e);
+        }
     }
 
 }
